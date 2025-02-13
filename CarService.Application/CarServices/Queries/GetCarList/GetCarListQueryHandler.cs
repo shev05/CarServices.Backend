@@ -8,13 +8,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CarServices.Application.CarServices.Queries.GetCarList
 {
-    public class GetCarLestQueryHandler
+    public class GetCarListQueryHandler
         :IRequestHandler<GetCarListQuery, CarListVm>
     {
         private readonly ICarServiceDbContext _dbContext;
         private readonly IMapper _mapper;
 
-        public GetCarLestQueryHandler(ICarServiceDbContext dbContext, 
+        public GetCarListQueryHandler(ICarServiceDbContext dbContext, 
             IMapper mapper) => (_dbContext, _mapper) = (dbContext, mapper); 
         
         public async Task<CarListVm> Handle(GetCarListQuery request, 

@@ -63,5 +63,5 @@ if (app.Environment.IsDevelopment())
         options.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
     });
 }
-
+app.MapControllers();
 app.Run();

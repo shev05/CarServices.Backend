@@ -11,6 +11,7 @@ namespace CarServices.Application.CarServices.Commands.UpdateCar
     {
         public Guid Id { get; set; }
         public Guid ServiceId { get; set; }
+        public DateTime Year_car { get; set; }
         public string Mark { get; set; }
         public string Model { get; set; }
         public int Cost_car { get; set; }
