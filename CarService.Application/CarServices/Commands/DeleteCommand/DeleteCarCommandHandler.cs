@@ -15,6 +15,8 @@ namespace CarServices.Application.CarServices.Commands.DeleteCommand
         : IRequestHandler<DeleteCarCommand, Unit>
     {
         private readonly ICarServiceDbContext _dbContext;
+        public DeleteCarCommandHandler(ICarServiceDbContext dbContext) =>
+            _dbContext = dbContext;
         public async Task<Unit> Handle(DeleteCarCommand request,
             CancellationToken cancellationToken)
         {

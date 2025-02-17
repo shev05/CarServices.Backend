@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CarServices.Application.Interface;
+﻿using CarServices.Application.Interface;
 using MediatR;
 using CarServices.Domain;
 using Microsoft.EntityFrameworkCore;
@@ -26,7 +21,7 @@ namespace CarServices.Application.CarServices.Commands.CreateCar
                 Mark = request.Mark,
                 Model = request.Model,
                 Id = Guid.NewGuid(),
-                Year_car = DateTime.Now,
+                Year_car = request.Year_car,
                 Cost_car = request.Cost_car,
                 Status_car = true
             };

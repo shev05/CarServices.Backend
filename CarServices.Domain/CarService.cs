@@ -12,7 +12,7 @@ namespace CarServices.Domain
         public Guid ServiceId { get; set; }
         public string Mark { get; set; }
         public string Model { get; set; }
-        public DateTime Year_car { get; set; }
+        public int Year_car { get; set; }
         public int Cost_car { get; set; }
         public bool Status_car { get; set; }
     }

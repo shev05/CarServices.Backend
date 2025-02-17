@@ -1,5 +1,4 @@
-﻿using System;
-using MediatR;
+﻿using MediatR;
 
 namespace CarServices.Application.CarServices.Commands.CreateCar
 {
@@ -8,7 +7,7 @@ namespace CarServices.Application.CarServices.Commands.CreateCar
         public Guid ServiceId { get; set; }
         public string Mark { get; set; }
         public string Model { get; set; }
-        public DateTime Year_car { get; set; }
+        public int Year_car { get; set; }
         public int Cost_car { get; set; }
     }
 }
