@@ -3,6 +3,7 @@ using CarServices.Application;
 using CarServices.Application.Common.Mappings;
 using CarServices.Application.Interface;
 using CarServices.Persistence;
+using CarServices.WebApi.MiddleWare;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -50,7 +51,7 @@ if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
 }
-
+app.UseCustomExceptionHandler();
 app.UseRouting();
 app.UseHttpsRedirection();
 app.UseCors("AllowAll");
